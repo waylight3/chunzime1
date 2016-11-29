@@ -1,0 +1,1 @@
+web: gunicorn simpledjango.wsgi --workers 3

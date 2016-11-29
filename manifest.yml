@@ -1,8 +1,16 @@
 applications:
-- path: .
-  memory: 128M
-  instances: 1
-  domain: mybluemix.net
-  name: chunzime
-  host: chunzime
-  disk_quota: 1024M
+- name: chunzime
+  memory: 256M
+# This is command provided by cf -c option  
+  command: bash ./run.sh
+#  New Buildpack: https://developer.ibm.com/answers/questions/8782/about-deploying-python-applications/?community=bluemix
+#  buildpack: https://github.com/ephoning/heroku-buildpack-python.git
+#  buildpack: https://github.com/cloudfoundry/python-buildpack  # Use to work doesn't now
+  buildpack: python_buildpack
+  path: .
+declared-services:
+  mypostgres:
+    label: postgresql
+    plan: 100
+services:
+  - mypostgres

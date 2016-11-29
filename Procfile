@@ -1,1 +1,1 @@
-web: python server.py
+web: gunicorn simpledjango.wsgi --workers 2
