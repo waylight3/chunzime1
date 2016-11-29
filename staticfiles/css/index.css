@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'koverwatch';
-    src: url(koverwatch.ttf) format('truetype');
+    src: url(../ttf/koverwatch.ttf) format('truetype');
 }
 
 body{
