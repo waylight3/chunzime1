@@ -9,7 +9,7 @@ def index(request):
 #	    password='6PsBv4mrDBch',
 #	    version='2015-12-15'
 #	)
-    data = {'test':'fail'}
+	data = {'test':'fail'}
 #    config = {
 #	'conversion_target': 'ANSWER_UNITS'
 #    }
@@ -22,4 +22,4 @@ def index(request):
 	data['a'] = a
 	data['b'] = b
 	data['c'] = c
-    return render(request, 'simple/index.html', data)
+	return render(request, 'simple/index.html', data)
