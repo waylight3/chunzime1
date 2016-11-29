@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'koverwatch';
+    src: url(koverwatch.ttf) format('truetype');
+}
+
+body{
+	font-family: 'koverwatch';
+    margin-top: 0;
+}
+
+.navbar{
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar img{
+    height: 100px;
+    width: auto;
+}
+
+.red{
+	color: rgba(233, 0, 99, 100);
+}
+
+.blue{
+	color: rgba(0, 160, 233, 100);
+}
+
+.small{
+    font-size: 60%;
+}
+
+.container{
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(241,241,241,100);
+}
+
+.description{
+	background-color: rgba(49, 49, 49, 100);
+	font-size: 18pt;
+    color: white;
+    text-align: center;
+    padding: 40px 150px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.search{
+    padding: 40px;
+}
+
+.insearch{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.insearch input{
+    width: 50%;
+    height: auto;
+    line-height: normal;
+    padding: .8em .5em;
+    outline-style: none;
+    border: solid #00A0E9;
+    -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.insearch img{
+    height: 36px;
+    width: 36px;
+    border: solid #00A0E9;
+    vertical-align: middle;
+    margin-left: 10px;
+}

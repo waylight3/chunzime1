@@ -16,10 +16,8 @@ def index(request):
 #    with open(('sample.pdf'), 'rb') as document:
 #	response = document_conversion.convert_document(document=document, config=config)
 #	data['test'] = response.content.decode()
-	a = os.getcwd()
-	b = os.path.realpath(__file__)
-	c = os.path.dirname(os.path.realpath(__file__))
-	data['a'] = a
-	data['b'] = b
-	data['c'] = c
 	return render(request, 'simple/index.html', data)
+
+def home(request):
+	data = {}
+	return render(request, 'simple/home.html', data)
