@@ -37,13 +37,13 @@
 			var str = $("#question").val();
 			userinput(str);
 			$.ajax({
-				type: "post",
+				type: "get",
 				url: "/conversation",
 				dataType: "json",
 				data: { message: str },
 				success: function(result) {
 					var str2 = "";
-					str2 += result[answer];
+					str2 += result["answer"];
 					watsoninput(str2);
 				}
 			});

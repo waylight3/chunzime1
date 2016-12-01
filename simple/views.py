@@ -25,10 +25,9 @@ def home(request):
     return render(request, 'simple/home.html', data)
 
 def conversation(request):
-    print('!!!! %s !!!!!' % request)
     try:
-        if request.method == 'POST':
-            message = request.POST['message']
+        if request.method == 'GET':
+            message = request.GET['message']
             data = {'answer':'you said "%s".' % message}
             json_data = json.dumps(data)
             return HttpResponse(json_data, content_type='application/json')
