@@ -13,7 +13,7 @@ def index(request):
     workspace_id = '95e19486-e402-4c2b-9007-b0b36be7b066'
     response = conversation.message(
             workspace_id=workspace_id,
-            message_input={'text': 'Turn on the lights'},
+            message_input={'text': 'Tell me what is earthquake prevention'},
             context=context
             )
     data = {'answer':context}
