@@ -91,4 +91,52 @@ body{
     margin-top: 20px;
     height: 400px;
     background-color: white;
+    overflow-y: scroll;
+}
+
+.user{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.user img{
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.user div{
+    float: left;
+    background-color: rgba(233, 0, 99, 100);
+}
+
+.watson{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.watson img{
+    width: 50px;
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.watson div{
+    float: right;
+    background-color: rgba(0, 160, 233, 100);
+}
+.chat{
+    max-width: 60%;
+    font-size: 24pt;
+    padding: 5px 20px 5px 20px;
+    vertical-align: middle;
+    overflow: auto;
+    word-break: break-all;
+    border-radius: 25px;
 }

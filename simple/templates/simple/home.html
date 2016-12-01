@@ -3,8 +3,9 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Chunzime</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 <body>
@@ -14,23 +15,70 @@
             <img src="{% static "img/title.png" %}"/>
         </nav>
 		<div class = "description">
-			<span class="red">천지</span><span class="blue">미</span><span class="small">CHUNZIME</span>는 더 이상 자연재해로부터 안전하지 않은 대한민국에서 IBM에서 제공하는 WATSON API를 통하여 재해에 대한 기초 상식, 대처법, 발생 규모와 시기 등을 알려주어 안전한 대한민국을 만들고자 합니다.<br/><br/><br/>아래에 있는 검색을 통해 얻고 싶은 정보를 입력해보세요!<br/>(EX. Tell me how to deal with earthquake)
+			<span class="red">천지</span><span class="blue">미</span><span class="small">CHUNZIME</span>는 IBM에서 제공하는 WATSON API를 통하여 재해에 대한 기초 상식, 대처법, 발생 규모와 시기 등을 알려주어 안전한 대한민국을 만들고자 합니다.<br/><br/><br/>아래에 있는 검색을 통해 얻고 싶은 정보를 입력해보세요!<br/>(EX. Tell me how to deal with earthquake)
 		</div>
 		<div class = "wrapper">
             <div class = "box">
-                <div class="chatroom">
+                <div class="chatroom" id="chatroom">
 
                 </div>
             </div>
 		</div>
 		<div class = "search">
             <div class = "insearch">
-                <input type="text" name="question"/>
-                <img src="{% static "img/sample1.png" %}"/>
+                <input type="text" name="question" id="question"/>
+                <img src="{% static "img/sample1.png" %}" onclick = "tongsin();"/>
             </div>
 		</div>
         <footer></footer>
 	</div>
+	<script type="text/javascript">
+		function tongsin(){
+			var str = $("#question").text();
+			userinput(str);
+			$.ajax({
+				type: "post",
+				url: "/conversation",
+				dataType: "json",
+				data: { message: str },
+				success: function(result) {
+					var str2 = "";
+					str2 += result[answer];
+					watsoninput(str2);
+				}
+			});
+		}
+		//user's input = question
+		function userinput(str){
+			var parent = document.getElementById("chatroom");
+			var div = document.createElement("div");
+			div.className = "user";
+			var image = document.createElement("img");
+			image.src = "{% static "img/ilban_in.png" %}";
+			var div2 = document.createElement("div");
+			div2.className = "chat";
+			var t = document.createTextNode(str);
+			div2.appendChild(t);
+			div.appendChild(image);
+			div.appendChild(div2);
+			parent.appendChild(div);
+		}
+
+		function watsoninput(str){
+			var parent = document.getElementById("chatroom");
+			var div = document.createElement("div");
+			div.className = "watson";
+			var image = document.createElement("img");
+			image.src = "{% static "img/baksa_nim.png" %}";
+			var div2 = document.createElement("div");
+			div2.className = "chat";
+			var t = document.createTextNode(str);
+			div2.appendChild(t);
+			div.appendChild(div2);
+			div.appendChild(image);
+			parent.appendChild(div);
+		}
+	</script>
 </body>
 
 </html>
