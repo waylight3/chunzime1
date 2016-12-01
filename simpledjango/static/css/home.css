@@ -85,34 +85,10 @@ body{
 }
 
 .box{
-    width: 40%;
-    float: left;
-}
-
-.middlebox{
-    width: 20%;
-    float: left;
-    font-size: 28pt;
-    text-align: center;
-    padding-top: 300px;
-}
-
-.profile{
-}
-
-.profile img{
-    vertical-align: middle;
-    width: 50px;
-    margin: 20px;
-}
-
-.profile span{
-    vertical-align: middle;
-    font-size: 20pt;
+    width: 90%;
 }
 
 .chatroom{
-    clear: both;
     height: 400px;
     background-color: white;
 }
