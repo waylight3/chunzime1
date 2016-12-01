@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from watson_developer_cloud import DocumentConversionV1
 from watson_developer_cloud import ConversationV1
-import html, json, os
+import json, os
 
 def index(request):
     conversation = ConversationV1(
