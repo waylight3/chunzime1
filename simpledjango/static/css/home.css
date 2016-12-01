@@ -60,12 +60,12 @@ body{
 }
 
 .insearch input{
-    width: 80%;
+    width: 85%;
     height: auto;
     line-height: normal;
     padding: .8em .5em;
     outline-style: none;
-    border: solid rgba(241,241,241,100);
+    border: solid rgba(49, 49, 49, 100);
     -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
     -moz-appearance: none;
     appearance: none;
@@ -73,7 +73,7 @@ body{
 
 .insearch img{
     height: 30.4px;
-    width: 15%;
+    width: 7%;
     vertical-align: middle;
     margin-left: 10px;
 }
