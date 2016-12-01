@@ -141,3 +141,7 @@ body{
     word-break: break-all;
     border-radius: 25px;
 }
+
+.site{
+    float: left;
+}
