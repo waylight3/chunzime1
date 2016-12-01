@@ -40,9 +40,9 @@
 		}
 
 		$("#send_btn").hover(function() {
-   			$(this).src("{% static "img/sendover.png" %}");
+   			$(this).attr("src", "{% static "img/sendover.png" %}");
 		}, function(){
-    		$(this).src("{% static "img/send.png" %}");
+    		$(this).attr("src", "{% static "img/send.png" %}");
 		});
 
 		function tongsin(){
