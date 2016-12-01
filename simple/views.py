@@ -21,7 +21,16 @@ def conversation(request):
                     password='68xg1yDhpQOr',
                     version='2016-09-20'
                     )
-            context = {'conversation_id':'123456'}
+            context = {
+                    'conversation_id':'123456',
+                    'system': {
+                            'dialog_stack':[
+                                {"dialog_node":"hi"}
+                            ],
+                            'dialog_turn_counter':2,
+                            'dialog_request_counter':1
+                        }
+                    }
             workspace_id = '95e19486-e402-4c2b-9007-b0b36be7b066'
             response = conversation.message(
                     workspace_id=workspace_id,
