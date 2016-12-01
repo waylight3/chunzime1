@@ -47,8 +47,8 @@
 
 		function tongsin(){
 			var str = $("#question").val();
-			$.trim(str);
-			if(str.length == 0) return;
+
+			if($.trim(str).length == 0) return;
 		    $("#question").val("");
 			userinput(str);
 			$.ajax({
