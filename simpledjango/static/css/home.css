@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'koverwatch';
-    src: url(koverwatch.ttf) format('truetype');
+    src: url(../ttf/koverwatch.ttf) format('truetype');
 }
 
 body{
@@ -31,10 +31,11 @@ body{
 }
 
 .container{
-    width: 750px;
+    width: 850px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(241,241,241,100);
+    padding-bottom: 30px;
 }
 
 .description{
@@ -75,4 +76,43 @@ body{
     border: solid #00A0E9;
     vertical-align: middle;
     margin-left: 10px;
+}
+
+.wrapper{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.box{
+    width: 40%;
+    float: left;
+}
+
+.middlebox{
+    width: 20%;
+    float: left;
+    font-size: 28pt;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.profile{
+}
+
+.profile img{
+    vertical-align: middle;
+    width: 50px;
+    margin: 20px;
+}
+
+.profile span{
+    vertical-align: middle;
+    font-size: 20pt;
+}
+
+.chatroom{
+    clear: both;
+    height: 400px;
+    background-color: white;
 }
