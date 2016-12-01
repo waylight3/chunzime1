@@ -145,3 +145,7 @@ body{
 .site{
     float: left;
 }
+
+footer{
+    height: 46px;
+}
