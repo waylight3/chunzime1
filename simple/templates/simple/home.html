@@ -52,8 +52,8 @@
 
 		function tongsin(){
 			var str = $("#question").val();
-
-			if($.trim(str).length == 0){
+			str = $.trim(str);
+			if(str.length == 0){
 				$("#question").val("");
 				return;
 			}
