@@ -36,4 +36,6 @@ def conversation(request):
         data = {'answer':'fail'}
         json_data = json.dumps(data)
         return HttpResponse(json_data, content_type='application/json')
-
+    data = {'answer':'fail'}
+    json_data = json.dumps(data)
+    return HttpResponse(json_data, content_type='application/json')
