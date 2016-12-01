@@ -32,9 +32,9 @@ body{
 }
 
 .container{
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 0;
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgba(241,241,241,100);
     padding-bottom: 30px;
 }
