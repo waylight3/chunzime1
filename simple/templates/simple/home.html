@@ -5,7 +5,12 @@
 <head>
     <title>Chunzime</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}"/>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
+    	var stack = [];
+    	var turn_cnt = 0;
+    	var req_cnt = 0;
+    	var random = Math.floor(Math.random()*1000000000) + 1;
+    </script>
 </head>
 
 <body>
@@ -51,10 +56,12 @@
 		});
 
 		function tongsin(){
+			$("#question").disabled = true;
 			var str = $("#question").val();
 			str = $.trim(str);
 			if(str.length == 0){
 				$("#question").val("");
+				$("#question").disabled = true;
 				return;
 			}
 		    $("#question").val("");
@@ -63,11 +70,22 @@
 				type: "get",
 				url: "/conversation",
 				dataType: "json",
-				data: { message: str },
+				data: {
+                    conversation_id: random,
+                    system: {
+                        dialog_stack: stack,
+                        dialog_turn_counter: turn_cnt,
+                        dialog_request_counter: req_cnt
+                    }
+                },
 				success: function(result) {
+					$("#question").disabled = true;
 					var str2 = "";
 					str2 += result["answer"];
 					watsoninput(str2);
+					stack.push({dialog_node: str});
+					turn_cnt += 2;
+					req_cnt += 1;
 				}
 			});
 		}
