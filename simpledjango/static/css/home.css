@@ -5,7 +5,8 @@
 
 body{
 	font-family: 'koverwatch';
-    margin-top: 0;
+    margin: 0;
+    background-color: rgba(241,241,241,100);
 }
 
 .navbar{
@@ -31,9 +32,9 @@ body{
 }
 
 .container{
-    width: 850px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 0;
     background-color: rgba(241,241,241,100);
     padding-bottom: 30px;
 }
@@ -49,7 +50,7 @@ body{
 }
 
 .search{
-    padding: 40px;
+    margin-top: 40px;
 }
 
 .insearch{
@@ -59,7 +60,7 @@ body{
 }
 
 .insearch input{
-    width: 50%;
+    width: 80%;
     height: auto;
     line-height: normal;
     padding: .8em .5em;
@@ -71,17 +72,15 @@ body{
 }
 
 .insearch img{
-    height: 36px;
-    width: 36px;
+    height: 30.4px;
+    width: 15%;
     border: solid #00A0E9;
     vertical-align: middle;
     margin-left: 10px;
 }
 
 .wrapper{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 30px;
+    margin: 0;
 }
 
 .box{
@@ -89,6 +88,7 @@ body{
 }
 
 .chatroom{
+    margin-top: 20px;
     height: 400px;
     background-color: white;
 }
