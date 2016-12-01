@@ -57,12 +57,12 @@
 		});
 
 		function tongsin(){
-			$("#question").disabled = true;
+			$("#question").attr("disabled", true);
 			var str = $("#question").val();
 			str = $.trim(str);
 			if(str.length == 0){
 				$("#question").val("");
-				$("#question").disabled = true;
+				$("#question").attr("disabled", false);
 				return;
 			}
 		    $("#question").val("");
@@ -80,7 +80,7 @@
                     }
                 }),message:str},
 				success: function(result) {
-					$("#question").disabled = true;
+					$("#question").attr("disabled", false);
 					var str2 = "";
 					str2 += result["answer"];
 					watsoninput(str2);
