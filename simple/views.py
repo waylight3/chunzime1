@@ -16,7 +16,7 @@ def index(request):
             message_input={'text': 'Tell me what is earthquake prevention'},
             context=context
             )
-    data = {'answer':context}
+    data = {'answer':response}
     return render(request, 'simple/index.html', data)
 
 def home(request):
