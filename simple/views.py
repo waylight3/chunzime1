@@ -5,7 +5,7 @@ from watson_developer_cloud import ConversationV1
 import json, os
 
 def index(request):
-	data = {}
+    data = {}
     return render(request, 'simple/index.html', data)
 
 def home(request):
