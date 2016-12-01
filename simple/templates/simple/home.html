@@ -26,8 +26,8 @@
 		</div>
 		<div class = "search">
             <div class = "insearch">
-                <input type="text" name="question" id="question"/>
-                <img id="send_btn" src="{% static "img/send.png" %}" onclick = "tongsin();" onkeydown = "onKeyDown();" />
+                <input type="text" name="question" id="question" onkeydown = "onKeyDown();"/>
+                <img id="send_btn" src="{% static "img/send.png" %}" onclick = "tongsin();" />
             </div>
 		</div>
         <footer></footer>

@@ -74,6 +74,7 @@ body{
 .insearch img{
     height: 30.4px;
     width: 7%;
+    border-radius: 6px;
     vertical-align: middle;
     margin-left: 10px;
 }
