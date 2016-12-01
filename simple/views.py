@@ -1,7 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from watson_developer_cloud import DocumentConversionV1
 from watson_developer_cloud import ConversationV1
-import json, os
+import html, json, os
 
 def index(request):
     conversation = ConversationV1(
@@ -24,6 +25,7 @@ def home(request):
     return render(request, 'simple/home.html', data)
 
 def conversation(request):
+    print('!!!! %s !!!!!' % request)
     try:
         if request.method == 'POST':
             message = request.POST['message']
