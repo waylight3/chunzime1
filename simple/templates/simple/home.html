@@ -27,12 +27,24 @@
 		<div class = "search">
             <div class = "insearch">
                 <input type="text" name="question" id="question"/>
-                <img src="{% static "img/sample1.png" %}" onclick = "tongsin();"/>
+                <img id="send_btn" src="{% static "img/send.png" %}" onclick = "tongsin();"/>
             </div>
 		</div>
         <footer></footer>
 	</div>
 	<script type="text/javascript">
+		function onKeyDown(){
+		    if(event.keyCode == 13){
+		    	tongsin();
+		    }
+		}
+
+		$("#send_btn").hover(function() {
+   			$(this).src("{% static "img/sendover.png" %}");
+		}, function(){
+    		$(this).src("{% static "img/send.png" %}");
+		});
+
 		function tongsin(){
 			var str = $("#question").val();
 			userinput(str);
