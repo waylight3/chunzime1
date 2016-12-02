@@ -1,6 +1,9 @@
 @font-face {
     font-family: 'koverwatch';
     src: url(../ttf/koverwatch.ttf) format('truetype');
+}
+
+html{  
     background-image: url(../img/background_img.gif) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
