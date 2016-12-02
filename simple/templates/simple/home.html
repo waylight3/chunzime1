@@ -69,6 +69,7 @@
 			}
 		    $("#question").val("");
 			userinput(str);
+			$("#send_btn").attr("src", "{% static "img/sendloading.gif" %}");
 			$.ajax({
 				type: "get",
 				url: "/conversation",
@@ -90,6 +91,7 @@
 					turn_cnt += 2;
 					req_cnt += 1;
 					$("#question").focus();
+    				$("#send_btn").attr("src", "{% static "img/send.png" %}");
 				}
 			});
 		}
