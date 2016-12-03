@@ -7,7 +7,6 @@ body{
 	font-family: 'koverwatch';
     margin: 0;
     background-image: url("../img/background_img.jpg");
-    background-size: cover;
 }
 
 .navbar{
@@ -90,7 +89,7 @@ body{
 
 .chatroom{
     margin-top: 20px;
-    height: 600px;
+    height: 400px;
     background-color: white;
     overflow-y: scroll;
     border: 2px solid rgba(49, 49, 49, 1);
@@ -136,10 +135,10 @@ body{
 }
 
 .chat{
-    font-family: 'Dekko', cursive;
+    font-family: sans-serif;
     max-width: 60%;
-    font-size: 1.3rem;
-    padding: 7px 10px;
+    font-size: 1rem;
+    padding: 7px;
     vertical-align: middle;
     overflow: auto;
     word-break: break-all;
@@ -149,13 +148,26 @@ body{
     line-height: 1.5;
 }
 
-.chat button {
-    transition: all 0.5s ease;
-}
-
 .col-12{
     margin: 8px 0px;
     width: 100%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-6 button{
+    text-align: center;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 4px;
+    background-color: rgba(49, 49, 49, 1);
+    font-weight: bold;
+    color: white;
+    border-style: none;
+    height: 2rem;
 }
 
 .col-3{
@@ -225,24 +237,16 @@ body{
 }
 
 .sample ul li{
-    font-family: 'Dekko', cursive;
-    color: black;
+    color: gray;
     font-size: 18pt;
     border: solid 2px rgba(49, 49, 49, 1);
     margin: 5px 0;
-    padding: 5px 15px;
+    padding: 5px;
     background-color: rgba(255, 255, 255, 0.5);
-    transition: all .5s ease;
 }
 
-.sample ul li:not(:first-child):hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.sample ul li:first-child {
-    text-align: center;
-    background-color: rgba(49, 49, 49, 1);
-    color: white;
+.sample ul li:nth-child(1){
+    color: black;
 }
 
 .blurbox{
@@ -254,9 +258,8 @@ body{
     z-index: 50;
     background-color: rgba(49, 49, 49, 0.93);
     visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 1.5s ease;
-    transition: all 1.5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 footer{
