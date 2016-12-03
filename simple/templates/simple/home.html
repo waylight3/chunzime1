@@ -99,6 +99,7 @@
 		});
 
 		$("#sample ul li").click(function(){
+			if($(this).text() == "Sample questions") return;
 			$("#question").val($(this).text());
 			tongsin();
 		})
