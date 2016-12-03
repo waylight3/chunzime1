@@ -85,17 +85,17 @@
 		}
 
 		$(".plusbtn").focus(function(event){
-			$("#blurbox").css("visibility", "visible");
-			$("#blurbox").css("opacity", "1");
 			event.preventDefault();
 			$("#sample").slideToggle();
+			$("#blurbox").css("visibility", "visible");
+			$("#blurbox").css("opacity", "1");
 		});
 
 		$(".plusbtn").blur(function(event){
+			event.preventDefault();
+			$("#sample").delay(300).slideToggle();
 			$("#blurbox").css("visibility", "hidden");
 			$("#blurbox").css("opacity", "0");
-			event.preventDefault();
-			$("#sample").slideToggle();
 		});
 
 		$("#sample ul li").click(function(){
@@ -107,8 +107,6 @@
 		$("#question").blur(function(){
 			upkey = -1;
 		});
-
-
 
 		$("#send_btn").hover(function() {
    			$(this).attr("src", "{% static "img/sendover.png" %}");

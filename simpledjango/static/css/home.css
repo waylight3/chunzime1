@@ -7,6 +7,7 @@ body{
 	font-family: 'koverwatch';
     margin: 0;
     background-image: url("../img/background_img.jpg");
+    background-size: cover;
 }
 
 .navbar{
@@ -89,7 +90,7 @@ body{
 
 .chatroom{
     margin-top: 20px;
-    height: 400px;
+    height: 600px;
     background-color: white;
     overflow-y: scroll;
     border: 2px solid rgba(49, 49, 49, 1);
@@ -221,16 +222,23 @@ body{
 
 .sample ul li{
     font-family: 'Dekko', cursive;
-    color: #ccc;
+    color: black;
     font-size: 18pt;
     border: solid 2px rgba(49, 49, 49, 1);
     margin: 5px 0;
     padding: 5px 15px;
     background-color: rgba(255, 255, 255, 0.5);
+    transition: all .5s ease;
 }
 
-.sample ul li:nth-child(1){
-    color: black;
+.sample ul li:not(:first-child):hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sample ul li:first-child {
+    text-align: center;
+    background-color: rgba(49, 49, 49, 1);
+    color: white;
 }
 
 .blurbox{
@@ -242,8 +250,9 @@ body{
     z-index: 50;
     background-color: rgba(49, 49, 49, 0.93);
     visibility: hidden;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    opacity: 0;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
 }
 
 footer{
