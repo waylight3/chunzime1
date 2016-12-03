@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'koverwatch';
     src: url(../ttf/koverwatch.ttf) format('truetype');
+    src: url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css) format('truetype');
 }
 
 body{
@@ -136,7 +137,7 @@ body{
 }
 
 .chat{
-    font-family: 'Dekko', cursive;
+    font-family: 'Dekko', 'nanumgothic', cursive;
     max-width: 60%;
     font-size: 1.3rem;
     padding: 7px 10px;
