@@ -133,8 +133,9 @@ body{
 }
 
 .chat{
+    font-family: Nanum Gothic;
     max-width: 60%;
-    font-size: 24pt;
+    font-size: 1rem;
     padding: 5px 20px 5px 20px;
     vertical-align: middle;
     overflow: auto;
