@@ -271,3 +271,13 @@ table caption {
     color: white;
     font-weight: bold;
 }
+
+.img_container {
+    clear: both;
+
+}
+
+.img_container img {
+    width: 48%;
+    margin: 1%;
+}
