@@ -52,14 +52,7 @@
 		    }
 		}
 
-		function btnSelect(){
-			console.log($(this));
-			$(this).css("background-color", "rgba(100, 100, 100, 1)");
-			console.log($(this).css("background-color"));
-			$('.select').attr("disabled", true);
-			$("#question").val($(this).data("question"));
-			tongsin();
-		}
+
 
 		$("#send_btn").hover(function() {
    			$(this).attr("src", "{% static "img/sendover.png" %}");
@@ -140,6 +133,15 @@
 			div.appendChild(div2);
 			parent.appendChild(div);
 			parent.scrollTop = parent.scrollHeight;
+
+			$(".select").click(function(){
+				console.log($(this));
+				$(this).css("background-color", "rgba(100, 100, 100, 1)");
+				console.log($(this).css("background-color"));
+				$('.select').attr("disabled", true);
+				$("#question").val($(this).data("question"));
+				tongsin();
+			});
 		}
 
 		$("#question").val("Hello Watson, can I ask some question to you?");
