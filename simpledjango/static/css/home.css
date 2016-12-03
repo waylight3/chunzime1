@@ -149,11 +149,18 @@ body{
 }
 
 .col-12{
+    margin-top: 8px;
     width: 100%;
 }
 
 .col-3{
-    width: 25%;
+    width: 24.9%;
+}
+
+.col-3 button{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .site{
