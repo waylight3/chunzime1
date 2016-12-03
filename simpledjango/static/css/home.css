@@ -203,6 +203,12 @@ body{
     transition: transform .5s ease;
 }
 
+.sample ul{
+    list-style: none;
+    padding-left: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 footer{
     height: 46px;
 }
