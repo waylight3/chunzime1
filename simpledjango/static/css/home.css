@@ -170,6 +170,31 @@ body{
     height: 2rem;
 }
 
+.col-6 button:hover{
+    background-color: rgba(100, 100, 100, 1);
+}
+
+.col-4{
+    width: 33.3%;
+}
+
+.col-4 button{
+    text-align: center;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 4px;
+    background-color: rgba(49, 49, 49, 1);
+    font-weight: bold;
+    color: white;
+    border-style: none;
+    height: 2rem;
+}
+
+.col-4 button:hover{
+    background-color: rgba(100, 100, 100, 1);
+}
+
 .col-3{
     width: 25%;
 }
@@ -189,8 +214,6 @@ body{
 
 .col-3 button:hover{
     background-color: rgba(100, 100, 100, 1);
-}
-.deepdark{
 }
 
 .site{
