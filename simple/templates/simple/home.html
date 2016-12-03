@@ -11,6 +11,7 @@
     	var turn_cnt = 0;
     	var req_cnt = 0;
     	var random2 = Math.floor(Math.random()*1000000000) + 1;
+    	var context = {'conversation_id':random2};
     </script>
 </head>
 
@@ -80,22 +81,14 @@
 				type: "get",
 				url: "/conversation",
 				dataType: "json",
-				data: {context:JSON.stringify({
-                    conversation_id: random2,
-                    system: {
-                        dialog_stack: stack,
-                        dialog_turn_counter: turn_cnt,
-                        dialog_request_counter: req_cnt
-                    }
-                }),message:str},
+                data: {context:JSON.stringify(context), message:str},
 				success: function(result) {
 					$("#question").attr("disabled", false);
 					var str2 = "";
 					str2 += result["answer"];
 					watsoninput(str2);
-					stack.push({dialog_node: str});
-					turn_cnt += 2;
-					req_cnt += 1;
+					context = result["context"];
+					context["conversation_id"] = random2;
 					$("#question").focus();
     				$("#send_btn").attr("src", "{% static "img/send.png" %}");
 				}
@@ -127,8 +120,6 @@
 			image.src = "{% static "img/baksa_nim.png" %}";
 			var div2 = document.createElement("div");
 			div2.className = "chat";
-			//var t = document.createTextNode(str);
-			//div2.appendChild(t);
 			div2.innerHTML = str
 			div.appendChild(image);
 			div.appendChild(div2);
