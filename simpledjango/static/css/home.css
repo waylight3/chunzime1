@@ -154,13 +154,14 @@ body{
 }
 
 .col-3{
-    width: 24.9%;
+    width: 25%;
 }
 
 .col-3 button{
     display: inline-block;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .site{
