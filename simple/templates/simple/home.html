@@ -52,6 +52,13 @@
 		    }
 		}
 
+		function btnSelect(){
+			$(this).css("background-color", "rgba(100, 100, 100, 1)");
+			$('.select').attr("disabled", true);
+			$("#question").val($(this).data("question"));
+			tongsin();
+		}
+
 		$("#send_btn").hover(function() {
    			$(this).attr("src", "{% static "img/sendover.png" %}");
 		}, function(){
