@@ -11,6 +11,11 @@ body{
     background-size: cover;
 }
 
+.user .chat {
+    background-color: rgb(200, 200, 200);
+    color: #313131;
+}
+
 .navbar{
     text-align: center;
     padding: 20px;
