@@ -90,7 +90,7 @@ body{
 
 .chatroom{
     margin-top: 20px;
-    height: 400px;
+    height: 600px;
     background-color: white;
     overflow-y: scroll;
     border: 2px solid rgba(49, 49, 49, 1);
