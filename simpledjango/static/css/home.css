@@ -160,7 +160,8 @@ body{
 .col-3 button{
     text-align: center;
     width: 90%;
-    margin: auto;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .site{
