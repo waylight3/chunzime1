@@ -263,7 +263,7 @@ table thead {
     background-color: #eee;
 }
 
-table td {
+table td, table th {
     border: 1px solid #ccc;
 }
 
