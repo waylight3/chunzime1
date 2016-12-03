@@ -248,3 +248,26 @@ body{
 footer{
     height: 46px;
 }
+
+table {
+    font-family: 'Droid Sans', sans-serif;
+    width:100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+table thead {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+table td {
+    border: 1px solid #ccc;
+}
+
+table caption {
+    color: white;
+    font-weight: bold;
+}
