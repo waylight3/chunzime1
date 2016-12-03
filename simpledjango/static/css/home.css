@@ -188,6 +188,7 @@ body{
     bottom: 20px;
     border-radius: 50px;
     background-image: url("../img/plusbtn.png");
+    background-size: 70px;
 }
 
 footer{
