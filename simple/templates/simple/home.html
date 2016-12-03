@@ -70,6 +70,9 @@
 		    $("#question").val("");
 			userinput(str);
 			$("#send_btn").attr("src", "{% static "img/sendloading.gif" %}");
+			if (str.split(' ').length == 1) {
+				str = "tell me what is " + str;
+			}
 			$.ajax({
 				type: "get",
 				url: "/conversation",
@@ -106,6 +109,7 @@
 			div2.className = "chat";
 			var t = document.createTextNode(str);
 			div2.appendChild(t);
+			div2.innerHTML = str
 			div.appendChild(image);
 			div.appendChild(div2);
 			parent.appendChild(div);
@@ -120,8 +124,9 @@
 			image.src = "{% static "img/baksa_nim.png" %}";
 			var div2 = document.createElement("div");
 			div2.className = "chat";
-			var t = document.createTextNode(str);
-			div2.appendChild(t);
+			//var t = document.createTextNode(str);
+			//div2.appendChild(t);
+			div2.innerHTML = str
 			div.appendChild(image);
 			div.appendChild(div2);
 			parent.appendChild(div);
