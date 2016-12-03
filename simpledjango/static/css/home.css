@@ -167,10 +167,9 @@ body{
     font-weight: bolder;
     color: white;
     border-style: none;
-    font-size: 18pt;
 }
 
-.col-3 button :hover{
+.col-3 button:hover{
     background-color: rgba(241, 241, 241, 1);
 }
 .deepdark{
