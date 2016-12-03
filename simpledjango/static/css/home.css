@@ -191,11 +191,15 @@ body{
     background-size: 70px;
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
+    -webkit-transition: transform 1s ease;
+    transition: transform 1s ease;
 }
 
 .plusbtn:focus{
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+    -webkit-transition: transform 1s ease;
+    transition: transform 1s ease;
 }
 
 footer{
