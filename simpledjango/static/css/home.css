@@ -149,6 +149,10 @@ body{
     line-height: 1.5;
 }
 
+.chat button {
+    transition: all .5s ease;
+}
+
 .col-12{
     margin: 8px 0px;
     width: 100%;
@@ -261,16 +265,24 @@ body{
 }
 
 .sample ul li{
-    color: gray;
+    font-family: 'Dekko', cursive;
+    color: black;
     font-size: 18pt;
     border: solid 2px rgba(49, 49, 49, 1);
     margin: 5px 0;
-    padding: 5px;
+    padding: 5px 15px;
     background-color: rgba(255, 255, 255, 0.5);
+    transition: all .5s ease;
 }
 
-.sample ul li:nth-child(1){
-    color: black;
+.sample ul li:first-child {
+    background-color: rgba(49, 49, 49, 1);
+    text-align: center;
+    color: white;
+}
+
+.sample ul li:not(:first-child):hover {
+    background-color: #ccc;
 }
 
 .blurbox{
@@ -282,8 +294,8 @@ body{
     z-index: 50;
     background-color: rgba(49, 49, 49, 0.93);
     visibility: hidden;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
 }
 
 footer{
