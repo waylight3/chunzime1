@@ -182,8 +182,8 @@ body{
 
 .plusbtn{
     position: fixed;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     right: 20px;
     bottom: 20px;
     border-radius: 50px;
