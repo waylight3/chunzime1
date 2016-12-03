@@ -168,6 +168,9 @@ body{
     border-style: none;
 }
 
+.col-3 button{
+    background-color: rgba(241, 241, 241, 1);
+}
 .deepdark{
 }
 
