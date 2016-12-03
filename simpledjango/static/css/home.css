@@ -170,7 +170,7 @@ body{
     font-size: 18pt;
 }
 
-.col-3 button{
+.col-3 button :hover{
     background-color: rgba(241, 241, 241, 1);
 }
 .deepdark{
