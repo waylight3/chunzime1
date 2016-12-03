@@ -135,10 +135,10 @@ body{
 }
 
 .chat{
-    font-family: sans-serif;
+    font-family: 'Dekko', cursive;
     max-width: 60%;
-    font-size: 1rem;
-    padding: 7px;
+    font-size: 1.3rem;
+    padding: 7px 10px;
     vertical-align: middle;
     overflow: auto;
     word-break: break-all;
@@ -220,11 +220,12 @@ body{
 }
 
 .sample ul li{
-    color: gray;
+    font-family: 'Dekko', cursive;
+    color: #ccc;
     font-size: 18pt;
     border: solid 2px rgba(49, 49, 49, 1);
     margin: 5px 0;
-    padding: 5px;
+    padding: 5px 15px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
