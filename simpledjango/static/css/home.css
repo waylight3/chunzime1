@@ -6,7 +6,7 @@
 body{
 	font-family: 'koverwatch';
     margin: 0;
-    background-color: rgba(241,241,241,100);
+    background-color: rgba(241,241,241,1);
 }
 
 .navbar{
@@ -20,11 +20,11 @@ body{
 }
 
 .red{
-	color: rgba(233, 0, 99, 100);
+	color: rgba(233, 0, 99, 1);
 }
 
 .blue{
-	color: rgba(0, 160, 233, 100);
+	color: rgba(0, 160, 233, 1);
 }
 
 .small{
@@ -35,12 +35,12 @@ body{
     width: 920px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(241,241,241,100);
+    background-color: rgba(241,241,241,1);
     padding-bottom: 30px;
 }
 
 .description{
-	background-color: rgba(49, 49, 49, 100);
+	background-color: rgba(49, 49, 49, 1);
 	font-size: 18pt;
     color: white;
     text-align: center;
@@ -65,7 +65,7 @@ body{
     line-height: normal;
     padding: .8em .5em;
     outline-style: none;
-    border: solid rgba(49, 49, 49, 100);
+    border: solid rgba(49, 49, 49, 1);
     border-radius: 6px;
     -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
     -moz-appearance: none;
@@ -110,7 +110,7 @@ body{
 
 .user div{
     float: left;
-    background-color: rgba(233, 0, 99, 100);
+    background-color: rgba(233, 0, 99, 1);
 }
 
 .watson{
@@ -129,7 +129,7 @@ body{
 
 .watson div{
     float: right;
-    background-color: rgba(0, 160, 233, 100);
+    background-color: rgba(0, 160, 233, 1);
 }
 
 .chat{
