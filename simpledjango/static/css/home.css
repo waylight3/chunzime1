@@ -145,6 +145,7 @@ body{
     border-radius: 6px;
     color: white;
     box-shadow: 0px 1px 3px gray;
+    line-height: 1.5;
 }
 
 .col-12{
@@ -166,6 +167,7 @@ body{
     font-weight: bold;
     color: white;
     border-style: none;
+    height: 2rem;
 }
 
 .col-3 button:hover{
