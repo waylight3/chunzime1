@@ -149,7 +149,7 @@ body{
 }
 
 .col-12{
-    margin-top: 8px;
+    margin: 8px 0px;
     width: 100%;
 }
 
@@ -162,10 +162,12 @@ body{
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
+    padding: 4px;
     background-color: rgba(49, 49, 49, 1);
     font-weight: bolder;
     color: white;
     border-style: none;
+    font-size: 18pt;
 }
 
 .col-3 button{
