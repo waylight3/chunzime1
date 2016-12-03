@@ -27,7 +27,6 @@ def conversation(request):
                 context=context
                 )
         data = {'answer':response['output']['text'], 'context':response['context']}
-        print(data)
         json_data = json.dumps(data)
         return HttpResponse(json_data, content_type='application/json')
     data = {'answer':'fail'}
