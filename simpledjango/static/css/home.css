@@ -158,7 +158,6 @@ body{
 }
 
 .col-3 button{
-    display: inline-block;
     text-align: center;
     width: 90%;
     margin: auto;
