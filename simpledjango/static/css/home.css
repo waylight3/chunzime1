@@ -189,6 +189,13 @@ body{
     border-radius: 50px;
     background-image: url("../img/plusbtn.png");
     background-size: 70px;
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+}
+
+.plusbtn:focus{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 footer{
