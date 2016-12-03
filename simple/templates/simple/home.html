@@ -53,7 +53,9 @@
 		}
 
 		function btnSelect(){
+			console.log($(this));
 			$(this).css("background-color", "rgba(100, 100, 100, 1)");
+			console.log($(this).css("background-color"));
 			$('.select').attr("disabled", true);
 			$("#question").val($(this).data("question"));
 			tongsin();
