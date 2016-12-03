@@ -180,6 +180,16 @@ body{
     float: left;
 }
 
+.plusbtn{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50px;
+    background-color: yellow;
+}
+
 footer{
     height: 46px;
 }
