@@ -48,13 +48,15 @@
         	<div style="clear:both;"></div>
         </footer>
 	</div>
-	<div class="sample">
+	<div id="blurbox" class="blurbox"></div>
+	<div id="sample" class="sample">
 		<ul>
 			<li>Sample questions</li>
 			<li>Tell me how to deal with earthquake.</li>
 			<li>What is the difference between magnitude and intensity of an earthquake.</li>
 			<li>I want to know what kind of disasters is in Korea.</li>
 			<li>Would you tell me how to measure disasters occur in Korea?</li>
+			<li>How can we implement restoration after disaster?</li>
 		</ul>
 	</div>
 	<button class="plusbtn"></button>
@@ -78,6 +80,25 @@
 			    else $("#question").val(messageStack[stacklen - upkey]);
 		    }
 		}
+
+		$(".plusbtn").focus(function(event){
+			$("#blurbox").css("visibility", "visible");
+			$("#blurbox").css("opacity", "1");
+			event.preventDefault();
+			$("#sample").slideToggle();
+		});
+
+		$(".plusbtn").blur(function(event){
+			$("#blurbox").css("visibility", "hidden");
+			$("#blurbox").css("opacity", "0");
+			event.preventDefault();
+			$("#sample").slideToggle();
+		});
+
+		$("#sample ul li").click(function(){
+			$("#question").val($(this).text());
+			tongsin();
+		})
 
 		$("#question").blur(function(){
 			upkey = -1;
@@ -122,6 +143,7 @@
 					context["conversation_id"] = random2;
 					$("#question").focus();
     				$("#send_btn").attr("src", "{% static "img/send.png" %}");
+    				upkey = 0;
 				}
 			});
 		}
