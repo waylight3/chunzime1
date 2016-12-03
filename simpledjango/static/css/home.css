@@ -165,6 +165,7 @@ body{
     background-color: rgba(241, 241, 241, 1);
     font-weight: bolder;
     color: white;
+    border-style: none;
 }
 
 .deepdark{
