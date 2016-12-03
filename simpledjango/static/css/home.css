@@ -136,11 +136,7 @@ body{
 }
 
 .chat{
-<<<<<<< HEAD
     font-family: 'Dekko', 'nanumgothic', cursive;
-=======
-    font-family: sans-serif;
->>>>>>> 1824d608842552fc3ce2a062010493488c460cb8
     max-width: 60%;
     font-size: 1rem;
     padding: 7px;
