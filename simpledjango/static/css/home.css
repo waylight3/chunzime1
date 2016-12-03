@@ -8,6 +8,7 @@ body{
 	font-family: 'koverwatch';
     margin: 0;
     background-image: url("../img/background_img.jpg");
+    background-size: cover;
 }
 
 .navbar{
