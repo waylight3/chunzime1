@@ -186,20 +186,21 @@ body{
     height: 70px;
     right: 20px;
     bottom: 20px;
+    border: none;
     border-radius: 50px;
     background-image: url("../img/plusbtn.png");
     background-size: 70px;
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
     -webkit-transition: transform .35s ease;
     transition: transform .35s ease;
 }
 
 .plusbtn:focus{
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: transform .35s ease;
-    transition: transform .35s ease;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
 }
 
 footer{
