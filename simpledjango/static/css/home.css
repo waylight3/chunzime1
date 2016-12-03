@@ -148,6 +148,14 @@ body{
     font-weight: bold;
 }
 
+.col-12{
+    width: 100%;
+}
+
+.col-3{
+    width: 25%;
+}
+
 .site{
     float: left;
 }
