@@ -9,7 +9,6 @@ body{
     margin: 0;
     background-image: url("../img/background_img.jpg");
     background-size: cover;
-    transition: all .5s linear;
 }
 
 .user .chat {
