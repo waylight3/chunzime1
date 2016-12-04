@@ -145,12 +145,12 @@ body{
 .chat{
     font-family: 'Dekko', 'nanumgothic', cursive;
     max-width: 60%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 7px 10px;
     vertical-align: middle;
     overflow: auto;
     word-break: break-all;
-    border-radius: 6px;
+    border-radius: 7px;
     color: white;
     box-shadow: 0px 1px 3px gray;
     line-height: 1.5;
