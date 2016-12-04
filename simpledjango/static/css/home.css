@@ -69,8 +69,9 @@ body{
 .insearch input{
     width: 85%;
     height: auto;
+    font-size: 1em;
     line-height: normal;
-    padding: .8em .5em;
+    padding: .4em .5em;
     outline-style: none;
     border: solid 2px rgba(49, 49, 49, 1);
     border-radius: 3px;
