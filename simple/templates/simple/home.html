@@ -94,6 +94,7 @@
 			$("#sample").slideToggle();
 			$("#blurbox").css("visibility", "visible");
 			$("#blurbox").css("opacity", "1");
+			$("body").css("filter", "blur(6px)");
 		});
 
 		// 우측 하단 + 버튼 메뉴 닫기
@@ -102,6 +103,7 @@
 			$("#sample").delay(300).slideToggle();
 			$("#blurbox").css("visibility", "hidden");
 			$("#blurbox").css("opacity", "0");
+			$("body").css("filter", "none");
 		});
 
 		// 우측 하단 + 버튼 메뉴 클릭시 바로 질문 보내지도록 설정
