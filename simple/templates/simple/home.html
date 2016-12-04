@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
+    	// 전역 변수 설정
     	var turn_cnt = 0;
     	var req_cnt = 0;
     	var random2 = Math.floor(Math.random()*1000000000) + 1;
@@ -65,9 +66,12 @@
 	<button class="plusbtn"></button>
 	<script type="text/javascript">
 		function onKeyDown(){
+			// 엔터 입력으로 질문 보내기
 		    if(event.keyCode == 13){
 		    	tongsin();
 		    }
+
+		    // 위쪽, 아래쪽 방향키로 이전 질문으로 이동 기능
 		    if(event.keyCode == 38){
 		    	upkey += 1;
 			    if(upkey >= stacklen) upkey = stacklen;
@@ -84,6 +88,7 @@
 		    }
 		}
 
+		// 우측 하단 + 버튼 메뉴 열기
 		$(".plusbtn").focus(function(event){
 			event.preventDefault();
 			$("#sample").slideToggle();
@@ -91,6 +96,7 @@
 			$("#blurbox").css("opacity", "1");
 		});
 
+		// 우측 하단 + 버튼 메뉴 닫기
 		$(".plusbtn").blur(function(event){
 			event.preventDefault();
 			$("#sample").delay(300).slideToggle();
@@ -98,6 +104,7 @@
 			$("#blurbox").css("opacity", "0");
 		});
 
+		// 우측 하단 + 버튼 메뉴 클릭시 바로 질문 보내지도록 설정
 		$("#sample ul li").click(function(){
 			if($(this).text() == "Sample questions") return;
 			$("#question").val($(this).text());
@@ -108,29 +115,41 @@
 			upkey = -1;
 		});
 
+		// 버튼에 마우스 올리면 색 변하도록 설정
 		$("#send_btn").hover(function() {
    			$(this).attr("src", "{% static "img/sendover.png" %}");
 		}, function(){
     		$(this).attr("src", "{% static "img/send.png" %}");
 		});
 
+		// 서버 api와 통신
 		function tongsin(){
 			$("#question").attr("disabled", true);
 			var str = $("#question").val();
 			str = $.trim(str);
+
+			// 빈 문자열은 입력할 수 없음
 			if(str.length == 0){
 				$("#question").val("");
 				$("#question").attr("disabled", false);
 				return;
 			}
+
+			// 질문 내용 대화창에 출력
 		    $("#question").val("");
 			userinput(str);
 			messageStack.push(str);
 			stacklen++;
+
+			// 답변 오기 전까지 버튼 로딩 표시로 변환
 			$("#send_btn").attr("src", "{% static "img/sendloading.gif" %}");
+
+			// 한 단어 질문 예외 처리
 			if (str.split(' ').length == 1) {
 				str = "tell me what is " + str;
 			}
+
+			// 서버 api 통신
 			$.ajax({
 				type: "get",
 				url: "/conversation",
@@ -149,7 +168,8 @@
 				}
 			});
 		}
-		//user's input = question
+
+		// 사용자 질문 대화창에 출력
 		function userinput(str){
 			var parent = document.getElementById("chatroom");
 			var div = document.createElement("div");
@@ -167,6 +187,7 @@
 			parent.scrollTop = parent.scrollHeight;
 		}
 
+		// watson 대답 대화창에 출력
 		function watsoninput(str){
 			var parent = document.getElementById("chatroom");
 			var div = document.createElement("div");
@@ -191,6 +212,7 @@
 			});
 		}
 
+		// 대화방 입장시 첫 질문 자동 출력
 		$("#question").val("Hello Watson, can I ask some question to you?");
     	tongsin();
 	</script>
