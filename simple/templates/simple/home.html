@@ -3,54 +3,54 @@
 <html>
 
 <head>
-    <title>Chunzime :: 천재지변알리미</title>
-    <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
-    	// 전역 변수 설정
-    	var turn_cnt = 0;
-    	var req_cnt = 0;
-    	var random2 = Math.floor(Math.random()*1000000000) + 1;
-    	var context = {'conversation_id':random2};
-    	var messageStack = [];
-    	var upkey = 0;
-    	var stacklen = 0;
-    </script>
+	<title>Chunzime :: 천재지변알리미</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}"/>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		// 전역 변수 설정
+		var turn_cnt = 0;
+		var req_cnt = 0;
+		var random2 = Math.floor(Math.random()*1000000000) + 1;
+		var context = {'conversation_id':random2};
+		var messageStack = [];
+		var upkey = 0;
+		var stacklen = 0;
+	</script>
 </head>
 
 <body>
 	<div class = "container">
 		<nav class = "navbar">
-            <a href="/home"><img src="{% static "img/logo.png" %}"/></a>
-            <a href="/home"><img src="{% static "img/title.png" %}"/></a>
-        </nav>
+			<a href="/home"><img src="{% static "img/logo.png" %}"/></a>
+			<a href="/home"><img src="{% static "img/title.png" %}"/></a>
+		</nav>
 		<div class = "description">
 			<span class="red">천지</span><span class="blue">미</span><span class="small">CHUNZIME</span>는 IBM에서 제공하는 WATSON API를 통하여 재해에 대한 기초 상식, 대처법, 발생 규모와 시기 등을 알려주어 안전한 대한민국을 만들고자 합니다.<br/><br/>아래에 있는 검색창에 얻고 싶은 정보를 입력해보세요!<br/>(EX. Tell me how to deal with earthquake)
 		</div>
 		<div class = "wrapper">
-            <div class = "box">
-                <div class="chatroom" id="chatroom">
+			<div class = "box">
+				<div class="chatroom" id="chatroom">
 
-                </div>
-            </div>
+				</div>
+			</div>
 		</div>
 		<div class = "search">
-            <div class = "insearch">
-                <input type="text" name="question" id="question" onkeydown = "onKeyDown();"/>
-                <img id="send_btn" src="{% static "img/send.png" %}" onclick = "tongsin();" />
-            </div>
+			<div class = "insearch">
+				<input type="text" name="question" id="question" onkeydown = "onKeyDown();"/>
+				<img id="send_btn" src="{% static "img/send.png" %}" onclick = "tongsin();" />
+			</div>
 		</div>
 		<div style="margin: 30px 0px 30px 0;border: solid black 1px;"></div>
-        <footer>
-        	<div class="site"><a href="http://www.mpss.go.kr/home/index.html"><img src="{% static "img/f_1.png" %}"/></a></div>
-        	<div class="site"><a href="http://www.kma.go.kr/index.jsp"><img src="{% static "img/f_2.png" %}"/></a></div>
-        	<div class="site"><a href="http://kostat.go.kr/portal/korea/index.action"><img src="{% static "img/f_3.png" %}"/></a></div>
-        	<div class="site"><a href="http://www.safekorea.go.kr/idsiSFK/index.jsp"><img src="{% static "img/f_4.png" %}"/></a></div>
-        	<div style="clear:both;"></div>
-        </footer>
+		<footer>
+			<div class="site"><a href="http://www.mpss.go.kr/home/index.html"><img src="{% static "img/f_1.png" %}"/></a></div>
+			<div class="site"><a href="http://www.kma.go.kr/index.jsp"><img src="{% static "img/f_2.png" %}"/></a></div>
+			<div class="site"><a href="http://kostat.go.kr/portal/korea/index.action"><img src="{% static "img/f_3.png" %}"/></a></div>
+			<div class="site"><a href="http://www.safekorea.go.kr/idsiSFK/index.jsp"><img src="{% static "img/f_4.png" %}"/></a></div>
+			<div style="clear:both;"></div>
+		</footer>
 	</div>
 	<div id="blurbox" class="blurbox"></div>
 	<div id="sample" class="sample">
@@ -67,25 +67,25 @@
 	<script type="text/javascript">
 		function onKeyDown(){
 			// 엔터 입력으로 질문 보내기
-		    if(event.keyCode == 13){
-		    	tongsin();
-		    }
+			if(event.keyCode == 13){
+				tongsin();
+			}
 
-		    // 위쪽, 아래쪽 방향키로 이전 질문으로 이동 기능
-		    if(event.keyCode == 38){
-		    	upkey += 1;
-			    if(upkey >= stacklen) upkey = stacklen;
-			    if(upkey <= -1) upkey = -1;
-			    if(upkey == -1) $("#question").val("");
-			    else $("#question").val(messageStack[stacklen - upkey]);
-		    }
-		    if(event.keyCode == 40){
-		    	upkey -= 1;
-			    if(upkey >= stacklen) upkey = stacklen;
-			    if(upkey <= -1) upkey = -1;
-			    if(upkey == -1) $("#question").val("");
-			    else $("#question").val(messageStack[stacklen - upkey]);
-		    }
+			// 위쪽, 아래쪽 방향키로 이전 질문으로 이동 기능
+			if(event.keyCode == 38){
+				upkey += 1;
+				if(upkey >= stacklen) upkey = stacklen;
+				if(upkey <= -1) upkey = -1;
+				if(upkey == -1) $("#question").val("");
+				else $("#question").val(messageStack[stacklen - upkey]);
+			}
+			if(event.keyCode == 40){
+				upkey -= 1;
+				if(upkey >= stacklen) upkey = stacklen;
+				if(upkey <= -1) upkey = -1;
+				if(upkey == -1) $("#question").val("");
+				else $("#question").val(messageStack[stacklen - upkey]);
+			}
 		}
 
 		// 우측 하단 + 버튼 메뉴 열기
@@ -117,9 +117,9 @@
 
 		// 버튼에 마우스 올리면 색 변하도록 설정
 		$("#send_btn").hover(function() {
-   			$(this).attr("src", "{% static "img/sendover.png" %}");
+			$(this).attr("src", "{% static "img/sendover.png" %}");
 		}, function(){
-    		$(this).attr("src", "{% static "img/send.png" %}");
+			$(this).attr("src", "{% static "img/send.png" %}");
 		});
 
 		// 서버 api와 통신
@@ -136,7 +136,7 @@
 			}
 
 			// 질문 내용 대화창에 출력
-		    $("#question").val("");
+			$("#question").val("");
 			userinput(str);
 			messageStack.push(str);
 			stacklen++;
@@ -154,7 +154,7 @@
 				type: "get",
 				url: "/conversation",
 				dataType: "json",
-                data: {context:JSON.stringify(context), message:str},
+				data: {context:JSON.stringify(context), message:str},
 				success: function(result) {
 					$("#question").attr("disabled", false);
 					var str2 = "";
@@ -163,8 +163,8 @@
 					context = result["context"];
 					context["conversation_id"] = random2;
 					$("#question").focus();
-    				$("#send_btn").attr("src", "{% static "img/send.png" %}");
-    				upkey = 0;
+					$("#send_btn").attr("src", "{% static "img/send.png" %}");
+					upkey = 0;
 				}
 			});
 		}
@@ -214,7 +214,7 @@
 
 		// 대화방 입장시 첫 질문 자동 출력
 		$("#question").val("Hello Watson, can I ask some question to you?");
-    	tongsin();
+		tongsin();
 	</script>
 </body>
 
